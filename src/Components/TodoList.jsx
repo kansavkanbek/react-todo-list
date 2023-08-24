@@ -8,8 +8,10 @@ function TodoList({todos, setTodos}) {
             {todos?.map((todo) => (
               <Todo
               text = {todo.text}
+              todo = {todo}
               key = {todo.id}
               todos ={todos}
+              setTodos ={setTodos}
              />
             ))}
             

@@ -1,8 +1,8 @@
 import React from 'react';
 
-function Todo({ text, todos }) {
+function Todo({ text, todos, setTodos, todo }) {
   const deleteHandler  = () => {
-    
+   setTodos (todos.filter((el) => el.id !== todo.id))
   }
 
 
@@ -12,7 +12,7 @@ function Todo({ text, todos }) {
             <i className="fas fa-check-circle"></i>
         </button>
         <li className="todo-item">{text}</li>
-        <button className="trash-btn">
+        <button className="trash-btn" onClick={deleteHandler}>
             <i className="fas fa-minus-circle"></i>
         </button>
     </div>
