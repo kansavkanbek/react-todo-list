@@ -1,17 +1,22 @@
-import React from 'react'
+import React from 'react';
 
-function Todo() {
+function Todo({ text, todos }) {
+  const deleteHandler  = () => {
+    
+  }
+
+
   return (
     <div className="todo">
         <button className="complete-btn">
             <i className="fas fa-check-circle"></i>
         </button>
-        <li className="todo-item">asdasd</li>
+        <li className="todo-item">{text}</li>
         <button className="trash-btn">
-            <i className="fa fa-minus-circle"></i>
+            <i className="fas fa-minus-circle"></i>
         </button>
     </div>
-  )
+  );
 }
 
-export default Todo
+export default Todo;
